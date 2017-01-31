@@ -1,46 +1,101 @@
----
-layout: default
----
 
-{% include hero.html %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/Site.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<section class="about">
-  <div class="container">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-      {{ site.event.about.description | markdownify }}
-    </div>
-  </div>
-</section>
+    <title>Home</title>
+  </head>
+  <body>
 
-<section class="info">
-  <div class="container">
-    <div class="items row">
-      {% for section in site.event.info.sections %}
-        <div class="col-xs-12 col-sm-4 text-center">
-          <div class="item">
-            <img src="{{ section.image }}" />
-            <h1>{{ section.title }}</h1>
-            <p>{{ section.description }}</p>
+
+
+<!-- Navbar -->
+    <nav class="navbar #be9b7b darken-2 navbar-default">
+
+
+
+         <div class="nav-wrapper">
+
+             <ul class="nav navbar-nav">
+
+               <li><a href="index.html">Home</a></li>
+
+                 <li><a href="About.html">About</a></li>
+
+                 <li><a href="Projects.html">Projects</a></li>
+
+                 <li><a href="Contact.html">Contact</a></li>
+
+                 <li><a href="http://dumbgamedev.blogspot.com/" target="_blank">Blog</a></li>
+             </ul>
+
+       </nav>
+       <div class="valign-wrapper">
+
+       <div class="container z-depth-3">
+
+    <h3><img src="Pics/space_invader.png" alt="game image" height="50" width="50"/>Cameron Robinson | Software Developer<img src="Pics/space_invader.png" alt="game image" height="50" width="50"/></h3>
+    <p>My name is Cameron Robinson and I am a passionate engineer who loves to code.
+    Whether it is back-end or hard-coding objects and models or just making UX and UI
+    pleasurable client side,
+     I stay dedicated to doing good work.</p>
+
+  <p>I am also a video game junkie. You can find my blog about me creating
+    a video game <a href="http://dumbgamedev.blogspot.com/" target="_blank">here</a> as well as stuff I learn as a developer.</p>
+
+</div>
+     </div>
+     <div class="valign-wrapper">
+       <div class="container">
+       <h2><img src="Pics/space_invader.png" alt="game image" height="50" width="50"/>Highlights<img src="Pics/space_invader.png" alt="game image" height="50" width="50"/></h2>
+     </div>
+     </div>
+
+     <div class="container">
+
+     <div class="row" id="cardText">
+       <!--Scavenger Hunt !-->
+       <div class="col s6 m6">
+         <div class="card small">
+           <div class="card-image">
+             <img src="Pics/ScavengerHunt.png">
+             <span class="card-title">Scavenger Hunt</span>
+           </div>
+           <div class="card-content">
+             <p>Game in progress built in Unity with C# scripting with premade assets and animations.</p>
+           </div>
+           <div class="card-action">
+             <a href="https://github.com/ca959971/3DScavengerHunt" target="_blank">Github</a>
+           </div>
+         </div>
+       </div>
+          <!-- Card 2 !-->
+          <div class="col s6 m6">
+            <div class="card small">
+              <div class="card-image">
+                <img src="Pics/DateNightPic.PNG">
+                <span class="card-title">Date Night</span>
+              </div>
+              <div class="card-content">
+                <p>MVC Web Application For date ideas around the Cleveland area</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/ca959971/DateNightCleveland" target="_blank">Github</a>
+              </div>
+            </div>
           </div>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
 
-<section class="faq">
-  <div class="container">
-    <h1 class="text-center">FAQ</h1>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        {% for item in site.event.faq %}
-        <div class="question col-xs-12 col-sm-12">
-          <h2>{{ item.question }}</h2>
-          <hr>
-          {{ item.answer | markdownify }}
         </div>
-        {% endfor %}
+
       </div>
-    </div>
-  </div>
-</section>
+
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="Scripts/materialize.js"></script>
+      
+
+  </body>
+</html>
